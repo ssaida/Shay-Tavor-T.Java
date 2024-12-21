@@ -6,6 +6,10 @@ public class Point {
 		this._x = x;
 		this._y = y;
 	}
+	public Point(Point other) {
+		this._x = other._x;
+		this._y = other._y;  
+	}
 	public int getX() {
 		return this._x;
 	}
@@ -17,6 +21,13 @@ public class Point {
 	}
 	public void setY(int y) {
 		this._y = y;
+	}
+	public boolean equals(Point other) {
+		return this._x == other._x && this._y == other._y;
+	}
+	public void move(int x, int y) {
+		this._x += x;
+		this._y += y;
 	}
 	public String toString() {
 		return "Point at ("+this._x+","+this._y;
